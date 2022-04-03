@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="hu-HU">
+    <head>
+        <title>Minecraft teszt</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="https://minecraft.net/etc.clientlibs/minecraft/clientlibs/main/resources/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Minecraft, teszt, quiz, kvíz, Minecraft teszt, Minecraft quiz, Minecraft kvíz">
+        <style>
+            html, body {
+                background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAPAAA/+4ADkFkb2JlAGTAAAAAAf/bAIQABgQEBAUEBgUFBgkGBQYJCwgGBggLDAoKCwoKDBAMDAwMDAwQDA4PEA8ODBMTFBQTExwbGxscHx8fHx8fHx8fHwEHBwcNDA0YEBAYGhURFRofHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8f/8AAEQgBJgIoAwERAAIRAQMRAf/EAIoAAQADAQEBAAAAAAAAAAAAAAACAwQBBQgBAQADAQEAAAAAAAAAAAAAAAABAgMEBRAAAgECBAQEBQMEAgMBAAAAAAECEQMhMUEEUWFxEiIyUhOBkbFCBTMUNKHRYnLBgvAjQ1MRAQEBAAICAgICAgIDAAAAAAABAhEDMRIhBEFRMhNxkWEioUJS/9oADAMBAAIRAxEAPwD6JPPeQAMdAnloUqpNakN5eYBIAAAAAADNv/04f7FsOf7PiMRdxAAAAAAACTbS4gk5XqiVFoGroSAAAHAPS2tz3LSr5o4SMdTivR6d+2VpDUAAAAAAAAAAAAAAAAAPN3F33LzdcFhE1zOHm9u/bXKsszAAAABXdjkwptWFAAAAAAAHY+ZdQTyvDYAAAAAAAAtgqR6lLWuZxHSEgAAAAstS0IrTrqwNQAAAAAAGbf8A6cP9i2HP9nxGIu4QJAAAAAAstRzk/gF8xYFwAAAAAhftLvZdo8pYfEpqOj6+/XTeZPQCUAAAAAAAAAAAAAAASp3V3ssumcsETmc1j3b9cvONnmuhIAAAAONVTXEIqjJ0DIAAAAAAAj5l1BPLQGwAAAAAADsVVkVMnK0o1AAAAAA6nR1CZeF6dUmQ6PwAAAAAAAzb/wDThyeJbDm+z4jFoXcQEgAAAAZ5AXpUSXD6hq6EgAAAAAProB6di57lpT+D6mNnD0+vftnlMhcAAAOgcAVXEHLpA4SkCAAAAAefu7vfd7V5Y4fE1zPh5/2N+2v8KSzEAAAAAAEKrqo66MKbiAVAAAAAA7BNyVFXEJz5XhqBAEgAAACFltYVKVriJELAAAAAAALbTwa4EVr11YGjgADoEXKKzfwCLqRCV16BnexW8c8epLO/PlVPbwlivC+RM0zvVKpnanDNVXItyxuLECVAJAAE7UatvgFsRaGgAAAAAAABp2V2k3beUsV1Kbjp+tvi8Npk7glAAAjcu2rarcko8tRJyrvczPmsV78m8rMaf5M0mHF2fc/+WKd25OXdKTk+ORfhya3q3m1dZ31+3g33w4PMrcytuv7Os/8AMbrO+sXMK9ktFIpccO3r+xnX/FafoVdDgQAAIXrnt23L4Lqyczmqdm/XNrzOuepq8wJAAAAAAAHJLui18gizlQGQAABDsIym6RTl0C2c2+Gq1sX/APR/9V/crdOnH1vzpphbtwSUIpFOXTnEngnahPNY8hKaxL5UT28l5cUXmnPrps8KmmnR4MsyvwAAABKrpxIIuotMsijbgAAAAAAAA7F0lUJl4XkOgA5KcV/YcK3ciuVxvLBEs7u1AKAAAB0CudmE+T4omaU1iVRPbzjivEuRaXljrrs8KyVAC6MaRS+YayJBIAAAAAAAATcWmsGsU+gJePl6luanCM1qsjCx6udczlMLKb25sWV45KvpWLJmbWW+7OfNYr35K7KqtL21xzZeYcW/t6v8fhjk5SdZOr4vEu5LbfIAAAAhdZ3d+z5ZVj6XiiLmVt19+8eK22fyNmeFxe3J/FFLh29f283z8X/w1ppqqdU8msSjqllAMW+u91xQWUc+rNMRxfZ3zeGYu5gAAAAAAAABVciovDUMtRAIThZuXPIq89BavnGteGq3sYLG4+58NCl06cfWnmtEYqKpFdq4Iq6JJPDoSAAOkCMoRn5lUnlFzL5US2zzg/gy00w10fpS4yjhJUZblhZYEoTtrX5FdVpiJlVwAAAAAAAADhZG6lGmbWg4aZ7OIi5yetEFbu1EKgAAAAAAAACM7cJ+ZY8SZVbiVTKyoNSb8PMtLyxvX6/PLpKzoAAAAAAAABrz4A45abN6VizLvi3Gvh6szs5rp6+y4z8s17f7i5VLwR4L+5aYkYdn2ta+PEZ9a5tlnMBIAAAAAABQITtXr1p1typy0FnK+OzWf43hv2/5B3H2Sh46OjWWBncO/q+17fFnyzTU1JueDeZeOXUvPy4SgAAAAAAAABDjiptQTSlpUjk9fa8NFvZ2o4y8b5lPZ04+vmeflfRJUWC0SIbwAAAAAAAAAGk8GqrmCznypnto4uLpyZaaYb6Z5iEaUVMhfKkdISAAAAAA+nECMriWWJPCt0hKcmWkUurSDo+opm8LSjUAAAAAAAAAAAGW/PunTSORfMc3ZeagpNZPAlSVONziF5tNNPILcuhIAABAk26LFkJnNXQ20mvE6cit02z0c+V0bcI+VfEra3ziTw7OPfBxeTwETqczivLlFxk4v7XQ1eZZxeHAgAAAAAAAAAANuxt9sHN5vBdCmq7PrY+PZpaTzx6lXTZKpntovGLpyLTTHXRL4Uytzj5l8S0rDWLESVAJAAACLuJcwrdK5Tk+QUuqjVpprNYoI/L1LdxXIKa1z6mVj08a9pykFgAAAAAAAAAAq3E6Q7dZE5Zd2uIzJtZYGjlTVx6qq4leFptJSTyI4X5dISAG0sxwWoO5wLTKl2i5N5k8KW8uEgACFkHVFK1zeYkQsAAAAAAAAAI3J9sG/kTPKu7xGN448cy7lAAHU2sgcpK69cuIWmliknkF+UoxlJ0iqkcrSWrobZ5zfwK3TbPR+10YxiqRVCreZk8JBLgADHvrdJK4tcGXzXH9nHF5ZSzmAAAAAAAAAHYR75qK1FTnPN4epFKMUlklQyr08zicOhIAArnt4SxXhZPsy10yqJ2ZxzVVxLysNddiuuFSWaMriWWIVulblJ5hW1wIAAGrY3HV2288Y9Suo6frb+eGwo7AAAAAAAAAAAyXZd029FgjSRx9muagSoAAJKbWeJXhabqakmRwvNKm28y7KgQBIAAAdg6MirZvytKNAAAAAAAAABm3E6y7dFmXzHP265VEswAAAAMSUPTs/o23xiq/HEyr0+v+MTIXAAAABG7BXLcovhh1Equ8+0seXRrB5rM1eYAAAAAAAAANWxt1buNYLCP/ACV1XT9bP5bCjsAAAAB0Dz95/Ia0osOppnw4PsfzUEsQAAAAdjJwkpLOOIqc3i8vVjJSipLJmVenm8zkCQAAAAAAACF6fbbfF4InMZ9uuIyGjjAkAAAAAAAAAAAAC2LrGpnWsroSAAAAAAA5KSjFyemRMRq8RibbberzLuS3kAAAAAAEPUtfpQ/1S/oZV6fX/Gf4SC4AAAAAGDeW+253JYS+ppmuH7GOLyoJYAAAAAAACTbSWbBJz8PUtwVu3GK0z6mVr08Z9ZwkFgAAAAdA8/efyH0X0L58OD7H8/8ASgsxAAAAACGzY3Kxdt5rFdCmo7frb5nDUVdIAAAAAADoGTcT7p0WUcC+Y5O3XNVlmYAAAAAAAAAAAAACVt404lbFsVYVaAAAAAAAKNzPFQ4Ystlh26/CgsxAkAAAAB5BFepa/Th0RlXqY/jP8JBYAAAAACvc2vctNLzLFE5rPux7ZeaaPNAkAAAAADRsbfdc73lH6ldVv9fHN5bijuAAAAAA6B5+8/kPovoXz4cH2P5/6UFmIAAAAAErVx27kZLjR9BYtjXreXqJpqqyeXQyen5+QAAAAAAEbku223roTIrvXE5Y/wDnM0cIEgAAAAAAAAAAAAACzA2razoqyS5GPs7Z0Xg/ay9SHsn+i/s/ay9SHsf0X9n7SXqQ9j+i/s/ay9SHKP6KftZepDk/op+0n6kOT+ivMuqSuSUsJLNG08PN3L7fPlEIAAAAAAPIIepb/Th/qjKvVx4iQSAAAAAACXn3LK9yXa1SppHnbx83hH2XxRKvoey+KB6Hsvigeh7L4oHoey+KB6HsvigejbtoxjZSWer5mevLt6c8ZWkNQAAAAAOgefvP5D6L6F8+HB9j+f8ApQWYgAAAAAAPQ2kpOxHu0dF0Kad/Rf8Ar8rirYAAAAACjdN1itMy2XP33woLsAAAAAAAAAAAAAAAC/aWu+7V+WGLKarb6+PbX+G8zeg6DgBwA4AAHAMf5Dbd8fdgvHHzLii+NOT7XTzPaeXmmjzQJAAAAAeTCK9WHkjySMnq58OhIAAAAAFV+72rtWbJzGXbvicMxo5AAAAAAAF22ni4ccUU1HR0a8xoKugAAAAADoHn7z+Q+i+hfPhwfY/n/pQWYgAAAAAdhFykorGrCczm8PUjFRiorJYGVennPE4dCQAAAAAIXod0HxWKJlU7c8xkNHGAAAAAAAAAAAAAABD0dra9u0q+aWLMdXmvS6MeuVpDUAAAAAAAA8rfbZ2rnfH9OWXJmuNcvL+x0+t5nhmLOcAAAAB5MIerHyx6GT1c+HQkAAAAHJzUIuT+AkV1r1nLHJuTbebNHFby4SAAAAAAACbTTWaITLxeW5SUkmtTN2y8gSAAAADoHn7z+Q+i+hfPhwfY/n/pQWYgAAAAAatjbq5XHphErqur62PnlsKOsAAAAAAAAyXYds2tHijSVxbzxUCVQAAAAAAAAAAAALNvb9y6losWV1WnVj209IyekAAAAAAAAAI3bUbsHCWT+ol4V3ianFeLdtztXHCWa/quJvPl4+8XN4qIVAAAA8mB60fLHp/wZPUngCQAAAAZLtxzl/isEXkcfZv2qBZQAAAAAAAAAaNtPBw1WKKajo6dfHC4q3AAAAAAwb3+RLovoaZ8OD7H81BLEAAAADFtJZvAEj1LUFbtxitPqZV6eM+s4SCwAAAAAAABXuIVh3aonNZd2eYymjkAkAAAAFKuSWeIZ+yyM4sLTUSCQJAAG7ZW+233vOX0MtV3fXxxnn9tBV0AAAAAAAAAABm3229633R/UjlzRbOuHP8AZ6feczzHlf8AjNXlgACyFmcsclxZHK+eu1dCxbjniyt01z1xdGclrUhtNWLI3IvPBkNJuJVC4AAo3Fz7FjxLZjn7t/hQXc4EgAAAAAAAADsJds0yKnF4vLbzRm7uQAAAkoSZHK0zU1ajriRyvMF3b2bipOKfNZky8I31Z15jDe/GTVXal3L0vMvNuLs+nZ85+WOcZQdJpxfMvy5LLPMcCAABo2Vvuu97yh9SNVv9fHN5bjN3AAAAAAAAABSuHEHDFci4zafwNI4dZ4vDhKAABxtcQjlB3fSFbtWFADsZSWWQTNWLFci8HgwtNJVrkFuU7Vt3Liisnn0It4Xxn2vD1EksFksDF6knAAAAAAAAAAAAAHm/kNq4y92C8MsJJaM0xr8PO+108X2n5UQ285Ub8KLXTDPVfyuhZhHJY8WVtbZxImQsAAAHVJrJhM1YsV1akcNJ2fsuXVCOGLeRMhvs4jJVvPM0cnkAAAAAAAAAAAADVt590KPNGeo6unfMWENUlbk+RHK0ysVuK5kLzKQWAAACM7du4qTipISo1mXyx3vxieNmVHwlkXnY49/T/wDmsVy1dtOk4tc9DSWVx769Z8xD66EqPS29tW7SWrxZla9Hpx65WENAAAAAAAAAAAp3MKpTWazLZrHvz+Wcu5kXKKzYVtiErreSogrdIN1zCoAAAAAHVJrIHLbsbkYpzms8Eym3b9bUnzW+MoyVYuqM3dLy6EgAAAAAAAAA2lmC1CV3RLHiJFbtXJylg3gWZ28qJR7XT5EufU4RCoAAAAAHJNJNvJAt4ZJXJSk5VpwNOOHLdc3l1XePzCZpYpReTC0roSAAAAAAAAACTeCxfBAjRt7M4zUpOiyaKaro6euy/LaoRWSx4mfLtmZHQkCQIAAAAACSSTVGk1qmEWSxjv7PbwcbkU4tPy6MvNVydn18T/tE1OMv7ELzUroSAAAAAAAAAAFdy7bScW+6uFETJWe+zPHDBOc6tZI0cF0gFQAAAAAAADqTbSWbBJy2xioxUVkjOuyTicOptOqdGEy8LobqS86quJHq2z338r43ISxi68tSrozqXwkEgAAAANpYt0Bbwrd304cyeFLv9INt54kqc8uBAByUVJfQI1OVDww1JYAQAAAADNuLnc+2OSzL5jDt3zeFRLIAY6ATjdeTxC01U1OMsmFpZUgsAAAADqi5OiTb5EWkzb4XQ2zzm/8Aqit03z0ftdGEY4RVCtrfOZPDoSutuseawK1tm/CQSAAAAAAAAAMm4n3XKaRwRaOTt1zeFSZLJONySwzQXm7FkZxfJ8COGk3K6FgAAAAAKp7iCwj4mTMstd0nj5UzvTnnguCLyOfXZagSorur7l0YV3FYUAAAAAAAALttDxOfwRGq16s/PLQUbgAAq1qsGBdDczjhLxL+pHDXPdZ5XwvQlk8eDK8OjPZKmF3JSSzCLrhW7reSoTwpdohRwkAAAABXch9yEZ7yrJZAAABXeudkaLzMmRTs1xGX6l3KBIAAAAJK5Jc0EzScbkXyYXmomFnYW5zeCrzItTnFvhfDbRWM3V8FkVunRnpn5XJKKokkuCK8tpOAAAAnblR04kVbF+VpDUAAAAAAAAjdmoQcvl1Eiu9cTlh656l3CAAAElNrXDmQtNWLFcT5McNJuVILknGK8WCCLePKme5isIqvPQtMsdd/6UznOb8T+BaRhrVvlElAAA40mmmEVRisH8QyAAAAAAAM8EBshBQio8M+pSuvOeJwkQkAAAAAC61cm4tVI4b9eqkFgAAAAAAAABVONHyYYazxUCVQDkpKMasSIt4nLHKTnJyZpJw5beXAgAAAAAAAAu2nivKLyehGvDXonOuHodFQzegAAAAAAIF8X3RTIbZvLoSAAAAAAAzbmdZKKyWZbMc3drm8KCWAAAAAAHe+UVgxwn2sUOUpOsnUvGFtvkJAAAAAAKrqx7uOfUM9RAKgAAAAAW7eCc3J5RI1WnVnm8tJR0AAAAAAALbOTIrXrWBo4AAAAAAAAA5JKSoEWcqWqOhLCzhwIZb93vlReVZF5HP2b5VkswAAAAAAAABdtP5C6MjXht9f+b0TN3uAAAAAAAstSo6cciKvirCGoEAAAAA5OajFyegRrXE5YW22282XcNvLgQAAAAABx5CeS+FRoxAAAAAAAclHuVAixQGQAAAAAGy1DtglrmylrqxniJELAAAAAAALLWTIrXrWBoAAAAAAAAAAEbke5V1Qim88sl+52rtWbL5jk7N8fDMWYAAAAAAAAAABdtP5C6MjXht9f+b0TN3uAAAAAAAVpiBoTqqlW88OgAAADgGfdTygurJy5+/X4ZyznAAAAAAAceQnkvhUaMQAAAAAAACm4qSrowy1EQgAAAOp0afADampRT4mddcvIEgAAAAAALLWpFa9awNAAAAAAAAAAA7GLk6fMipk5ZPyG27Je9DySwkuD4l8acn2uri+08VjLuQAAAAAAAAAALtp/IXRka8Nvr/zeiZu9wAAAAAAAgZ7m4uKb7JOMVhgXmXNvuvPxUf3N/1sn1iv92/3T9zf9bHrD+7f7p+5v+tj1h/dv90/c3/Wx6w/u3+6fuL/AP8Ao/mPWH92/wB12M5Sxk6y1IsTNW+XSEgAAAAAAOPITyXwqNGIAAAAAAABVdeSCmqgFAAAABDRtpYOL0yK6jfq1+FxVsAAAAAAAstakVr1rA0AAAAAAAAAHSBdCKjFcSG2ZwShGUXGSqnmIXMs4rxtxZlYuuD8v2vkbS8vI7ev01x+FZLMAAAAAAAAAXbT+QujI14bfX/m9Ezd7gAAAAAAI3Z9kG9ckJFOzXEY+pq4gJAAAAB2DoyKnN+VpRqAAAAAAA48hPJfCo0YgAAAAAAON0Aobq2wx5AAAAAA7CTjJS4BObxeW2tVVa4mbrAAAAAAAWWs30DTr8rCrUJAAAAAAAAC23D7nnoRWmImQuAU7vbq/ap98cYsma4Zd/VN5/5jx2mm01RrBrmbPI/yAAAAAAAAALtn/Ij0ZGvDb6/83oGTvCQAAAAAgZtzOs+1ZRNMxy92ubx+lRZkAAAAAACFsHWJSts34dISAAAAAByWQiNeFRoxAkAAAAACu68O3jmFNVWFAAAAAAAQ07edYuOscuhXUdPVr8LSrQAAAHMCLuJZYk+qt05G7KMq6cCeETssrVGSlGq+JSx151ykQlwkAAAAAAlCPc+RC2YuIagAAEsH5Hbf/aK/3S+pfGnB9vp/9owGjgAkAAAAAABqsWnb8T85TVdHXnj5aY3eJXh0zs/aaaeQacgAAAA5OXbBy+XURGtcTliq2231+Jq4aAAAAAAAAStuj6kWLZvysKNAAAAATVuTzwI5XmLU1biufUNJiRCe3g8Y+F8NCZpnrpl8KZ2pwzWHFF5WGsWIEqASAAAFEpd0mwytcCAAAAAAAErcu2afwfQVbGuK2GbqADwzAg7q0x5lvVS7Rcm82SpzXCUASlbuO3Kqy1RFi2N3Na4yUkmsUzPh2yy+HQAAAAA6k26EJ4XRioqhDaTh0AAAAGq4PFcAPH3e39i7RLwPGDNs3l5Pf1emv+FJLEAAAAADTZtdvil5tORW1v144+atKtQDqbTww6BMvCcbukvmRwvnf7WJprDENJeQJAM+5liocMX1LZjn79fhSXYAAAAAAAAAC1OqKVrLy6Ql1JvICcbT1wXAjlpMJqMVkg0mZHQkAAdAruWbcv8AF8UTNM9dUqidi5HHzLiWmmGuqxX9SzICULkqRpqwrqqgzAAAAAAAADJQ1WpP2k5JrRV1RnZ8urF/6/LrucPmTMl2g226snhS0JQBIAAATt3XB/4vNEWL43c1rUlJVWKM+HZLyAAAAC63Giq89CtaZiQXAAAAAArv2I3rThLXyvgyZeFO3rm88V404ShNwkqSjgzbnl4+s2Xi+XAgAAAhos2aeKWehW10deOPmrirUAAAADWuoE43Ws8URw0m6s740b4KtAv7zjlicu5tvN4mjit5CQAAAAAAAAATtVbpxK1fHloja4/Ipy6J1ppJZBpJwAAAAAAAAAIztQnmseKHKusSqJ7aa8viXDUvNOfXTZ4ZLjfe0001oy0cu/PyiEAAAAAAANFnZX7uNOyPFlbqRv1/X1pts7Cxbxa75LV5FLqu3r+rnPn5qzc2u+y0s44ojN+V+7Htn/DzjZ5oEgAAAAAAJ2rrg8fI80VsX69+rWmmqrFPUo7JeQABO3Grq8kRavmcriGjgAAAAAAAGT8htu+HuwXjjmuKLYvDl+10+09p5jzDV5gEgF9mz98ljoitrbr6/wBryrYAAAAAAAAttRwciGvXCdm3LGlHxRMprqlUT29xYrxLkWmmOumxW8M8+BZkAAAAAEOqLeRHKZE1bWuJHs0mUlhlgVWnw0JpqqIdMvIAAAAAAAAAAAJ21WVeBFXzPlK7Zs3VS5FPnqRLVt9edeYxXvxjWNmVVpF5mk24uz6d/wDViuQnbdJx7XzLxx6zc+XAgAJNuiVXwBw12fx12dHPwR/qVu46uv6mr5bbO0sWl4Ypy9TxM7q129fRnK4hqEDoS8zcW/butaPFG2a8zux66VlmYAAAAAAAEJ2bvtvHGD0K2NevfFa001VYoo6+efDsU3KiITJyvSSVEQ2k4AAAAAAAAAADyt9tvaud8V/65/0ZrjXLzPs9PreZ4ZizmX2LP3y+CK2tuvH5q8q2AAAAAAAAGeATI0JUSRDeTiASAclbhLNDlW5l8qJbZ/Y68mXmmOuj9KnFxdJKjJY2WeXCVXVFsjlaZqatpZ4lbV5lIhYAAWWpZxIa9dWBoAAAAAAAAAAF8FSPMrW2Z8OhIBycITVJxUlzCNZl8sd38ZB1dp9r9LyLzbk7Ppy/xYrti7afjjRcdC8sri31az5j17Vm1aX/AK4qPPUxt5etjrznxEw0AgAAAlRvLfdb7ksYls1z/YxzGA1cAAAAAAAAAAss3ux0eMWVsadfZ63h6FuNIprGuplXoZnwkFgAAAAAAAAAAjctxuQcJeVomXhXeJqcV5cdq4XGpuva6LnQ09nmTp41xVxVqAAAAAAAAALLSq+7gQ0xPlaGrgAAAANJqjVQWcqJ24RlgieXPvElcCAAAAAdTo6hMXp1RDo55AAAAAAAAOgdgqy6EVOYuIbAAAAANJ4NVXBgslAAAAAAAGk1R5MFjy7tt27ji9MjaXl5nZn11wiSoAAAAAAAAAL9tuXbfbLGDyfAprPLfo7vX4vhvVGsHVcTN3gAAAAAAAAABn3W57PBB+PV8C2c8ufu7vX4nlihKjo8TSxxZ0tKNQAAAAAAAAgL4qkaEOjM4joSAAAAABVd8xLHs8oBQAAAAAC21LChDXFTDQAAAAAAAAutxpGurK1rmJBYAAAAAAAAAAAAAQMu+tNxVxZrBmmK5fs4+OWM0cYAAAAAAAgDAAaNruexqE/I8nwKajo6O7j4vhu6YmbuAAAAAAAAlRutyra7YY3H/QtnPLn7u71nE8sGePHU0cAShZCVcCtjXNSKrAAAAAAAJ241kQvic1aGwAAAAAACq75iWPZ5QCgAAAAAEoukkwnN4q4h0AAAAAAAOxVWkRUyLyGwAAAAAAAAAAAAAAByUVKLi8nmIizmcPOe3up0pVI1mnnXp1D9vd9JPMR/Vo/b3fSOYf1ac9i96RzD+rR7F70jmH9Wj2L3pHMP6tHsXeA9of1aQeGGqzClCUASAadrue2lufl+18Cmsuno7uP+tbczN2gAAAABKnc7hWlSOM3kWznlh290z8Ty89tt1eLeZq8/nn5oAAJ0BFnu26YySZThpNw9236kOD3h7tv1ocHtD3bfqQ4PaHu2/Uhwn2h7tv1IcHtD3IepDg9o0WkuxNOtc2Vrfr44+EguAAAAAAAqu+Ylj2eUAoAAAAAAAuttuOJDfF+EgsAAAAABbaSpUrWmImFwAAAAAAAAAAAAAADk3SPUI1VBLEAAAAAABm3EKTrpI0zXL3Z4qosxAkABDVtdzSlu5l9r4Gesuvo7vxWypR2AAABVuNwrSosZvJcCczlj3dsz/l50pOTcnm8zV59vN5CQAAcbomwiqAyAgAAAACiBw0bO/wBkvbl5ZZFdTl0/X7eLxfDcUdoAAAAAACq75iWPZ5QCgAAAAAEox7nQJzOauSoqEOgAAAAAABO3KjpoyKvirSGgAAAAAAAAAAAAAAEq7ta8iYy2rJUAAAAAAAV7jt9vF09PUnLLu44ZTRygAAAA37V3uylyPh+2Rlrh39F1x8xoKt3AOXHNR8Ee6WiwX1ERq2T4eZc7/cl7nn1No8zfPPz5RJVAAAIV3a05BXasKAAAAAAAAHpbd3HbSuKjWT4oz09HquvX5WENAAAAAAKrvmJY9nlAKAAAAAAXW6UwdWQ2xwkFwAAAAAAHVWuBAvXPMhvAAAAAAAH/2Q==');
+                font-family: Arial, Helvetica, sans-serif;
+                zoom: 120%;
+            }
+            legend, label {
+                font-size: large;
+            }
+            h1 {
+                color: forestgreen;
+                text-align: center;
+            }
+            h3 {
+                text-decoration: underline;
+            }
+            .pointer {
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            const correct = [
+                [false, true, false],
+                [true, false, false],
+                [true, false, false],
+                [true, false, false],
+                [false, false, true],
+                [false, true, false],
+                [false, true, false],
+                [false, false, true],
+                [true, false, false],
+                [false, true, false],
+                [false, false, true],
+                [false, false, true],
+				[true, false, false],
+				[false, true, false],
+				[false, false, true],
+				[false, false, true],
+				[true, false, false],
+				[false, true, false],
+				[false, false, true],
+				[true, false, false],
+				[true, false, false],
+				[false, true, false],
+				[true, false, false],
+				[false, false, true],
+				[false, true, false],
+				[false, true, false],
+				[false, false, true],
+				[true, false, false],
+				[false, true, false],
+				[false, true, false],
+            ];
+			const levels = [
+			    [0, 2, "Még sokat kell tanulnod. Hajrá!"],
+				[3, 12, "Egyértelműen van benned potenciál. Csak így tovább!"],
+				[13, 22, "Egyértelműen többet tudsz, mint a legtöbb játékos. Szép munka!"],
+				[23, 29, "Hűha, igazi szakértő vagy. Lenyűgöző!"],
+				[30, 30, "Hamisítatlan Minecraft-mester vagy. Egészen hihetetlen!"]
+			];
+			let points = 0;
+			let level;
+			function checkone(value, index, array) {
+			    const title = document.getElementById(`${index+1}.0`);
+				if (document.getElementById(`${index+1}.1`).checked == value[0] && document.getElementById(`${index+1}.2`).checked == value[1] && document.getElementById(`${index+1}.3`).checked == value[2]) {
+				    points++;
+					title.style.color = "green";
+					title.style.fontWeight = "bold";
+				} else {
+				    title.style.color = "red";
+				}
+			}
+			function setlevel(value, index, array) {
+			    if (points >= value[0] && points <= value[1]) {
+				    level = value[2];
+				}
+			}
+			function check() {
+			    correct.forEach(checkone);
+				levels.forEach(setlevel);
+				document.getElementById("result").innerHTML = `Eredmény: ${points} pont<br>${level}`;
+				points = 0;
+				window.location.href = window.location.pathname + "#result";
+			}
+			function res() {
+			    for(let i = 1; i < 31; i++) {
+				    const title = document.getElementById(`${i}.0`);
+				    title.style.color = "black";
+					title.style.fontWeight = "normal";
+				}
+				document.getElementById("result").innerHTML = "<br><br>"
+			}
+        </script>
+    </head>
+    <body>
+        <h1>Minecraft teszt</h1>
+        <form>
+            <h3>Alex és Steve</h3>
+            <fieldset>
+                <legend id="1.0">1. Hány szív élete van Alexnek és Steve-nek?</legend>
+                <input type="radio" id="1.1" name="1" value="20" required>
+                <label for="1.1">20</label><br>
+                <input type="radio" id="1.2" name="1" value="10" required>
+                <label for="1.2">10</label><br>
+                <input type="radio" id="1.3" name="1" value="15" required>
+                <label for="1.3">15</label><br>
+            </fieldset>
+            <fieldset>
+                <legend id="2.0">2. Mikor került be Alex a játékba?</legend>
+                <input type="radio" id="2.1" name="2" value="2014. szeptember 2." required>
+                <label for="2.1">2014. szeptember 2.</label><br>
+                <input type="radio" id="2.2" name="2" value="2013. március 19." required>
+                <label for="2.2">2013. március 19.</label><br>
+                <input type="radio" id="2.3" name="2" value="2013. augusztus 8." required>
+                <label for="2.3">2013. augusztus 8.</label><br>
+            </fieldset>
+            <fieldset>
+                <legend id="3.0">3. Milyen magas Alex és Steve blokkokban kifejezve?</legend>
+                <input type="radio" id="3.1" name="3" value="1,8 blokk" required>
+                <label for="3.1">1,8 blokk</label><br>
+                <input type="radio" id="3.2" name="3" value="1,7 blokk" required>
+                <label for="3.2">1,7 blokk</label><br>
+                <input type="radio" id="3.3" name="3" value="1,9 blokk" required>
+                <label for="3.3">1,9 blokk</label><br>
+            </fieldset>
+            <h3>Ételek</h3>
+            <fieldset>
+                <legend id="4.0">4. Mit esznek a macskák párosodás előtt?</legend>
+                <input type="radio" id="4.1" name="4" value="Halat" required>
+                <label for="4.1">Halat</label><br>
+                <input type="radio" id="4.2" name="4" value="Tejet" required>
+                <label for="4.2">Tejet</label><br>
+                <input type="radio" id="4.3" name="4" value="Tejfölt" required>
+                <label for="4.3">Tejfölt</label><br>
+            </fieldset>
+            <fieldset>
+                <legend id="5.0">5. Milyen kellemetlenség történhet, ha nyers csirkét eszel?</legend>
+                <input type="radio" id="5.1" name="5" value="Ételmérgezést kapsz" required>
+                <label for="5.1">Ételmérgezést kapsz</label><br>
+                <input type="radio" id="5.2" name="5" value="Kihányod" required>
+                <label for="5.2">Kihányod</label><br>
+                <input type="radio" id="5.3" name="5" value="Harminc másodpercig éhes leszel" required>
+                <label for="5.3">Harminc másodpercig éhes leszel</label><br>
+            </fieldset>
+            <fieldset>
+                <legend id="6.0">6. Milyen hozzávalókra van szükséged, ha tortát akarsz sütni?</legend>
+                <input type="radio" id="6.1" name="6" value="Cukor, tojás, kakaó, búza" required>
+                <label for="6.1">Cukor, tojás, kakaó, búza</label><br>
+                <input type="radio" id="6.2" name="6" value="Búza, cukor, tej és tojás" required>
+                <label for="6.2">Búza, cukor, tej és tojás</label><br>
+                <input type="radio" id="6.3" name="6" value="Tojás, búza, tej, gyümölcs" required>
+                <label for="6.3">Tojás, búza, tej, gyümölcs</label><br>
+            </fieldset>
+            <h3>Ellenséges mobok</h3>
+            <fieldset>
+                <legend id="7.0">7. Mit csinál a creeper közvetlenül a felrobbanása előtt?</legend>
+                <input type="radio" id="7.1" name="7" value="Hanggal figyelmeztet" required>
+                <label for="7.1">Hanggal figyelmeztet</label><br>
+                <input type="radio" id="7.2" name="7" value="Serceg és sistereg" required>
+                <label for="7.2">Serceg és sistereg</label><br>
+                <input type="radio" id="7.3" name="7" value="Semmit" required>
+                <label for="7.3">Semmit</label><br>
+            </fieldset>
+            <fieldset>
+                <legend id="8.0">8. Milyen fegyvert használ a boszorkány?</legend>
+                <input type="radio" id="8.1" name="8" value="A padlóból kiemelkedő fogakat" required>
+                <label for="8.1">A padlóból kiemelkedő fogakat</label><br>
+                <input type="radio" id="8.2" name="8" value="Íjat" required>
+                <label for="8.2">Íjat</label><br>
+                <input type="radio" id="8.3" name="8" value="Különböző bájitalokat" required>
+                <label for="8.3">Különböző bájitalokat</label><br>
+            </fieldset>
+            <fieldset>
+                <legend id="9.0">9. Milyen fényerősségen spawnol a zombi?</legend>
+                <input type="radio" id="9.1" name="9" value="1.18-tól 0, előtte 7 vagy alacsonyabb" required>
+                <label for="9.1">1.18-tól 0, előtte 7 vagy alacsonyabb</label><br>
+                <input type="radio" id="9.2" name="9" value="1.18-tól 1, előtte 7 vagy alacsonyabb" required>
+                <label for="9.2">1.18-tól 1, előtte 7 vagy alacsonyabb</label><br>
+                <input type="radio" id="9.3" name="9" value="" required>
+                <label for="9.3">7 vagy alacsonyabb</label><br>
+            </fieldset>
+            <h3>Biomok</h3>
+            <fieldset>
+                <legend id="10.0">10. Miből áll a gombasziget?</legend>
+                <input type="radio" id="10.1" name="10" value="Földből" required>
+                <label for="10.1">Földből</label><br>
+                <input type="radio" id="10.2" name="10" value="Micéliumból" required>
+                <label for="10.2">Micéliumból</label><br>
+                <input type="radio" id="10.3" name="10" value="Gombákból" required>
+                <label for="10.3">Gombákból</label><br>
+            </fieldset>
+            <fieldset>
+                <legend id="11.0">11. Melyik biomban nő a legtöbb virág?</legend>
+                <input type="radio" id="11.1" name="11" value="A síkságon" required>
+                <label for="11.1">A síkságon</label><br>
+                <input type="radio" id="11.2" name="11" value="Az új rét biomban (meadow)" required>
+                <label for="11.2">Az új rét biomban (meadow)</label><br>
+                <input type="radio" id="11.3" name="11" value="A virágos erdőben" required>
+                <label for="11.3">A virágos erdőben</label><br>
+            </fieldset>
+            <fieldset>
+                <legend id="12.0">12. Hogy hívják azt a bugos területet a világ szélén, ahol a biomok szétesnek?</legend>
+                <input type="radio" id="12.1" name="12" value="Ne-menj-oda" required>
+                <label for="12.1">Ne-menj-oda</label><br>
+                <input type="radio" id="12.2" name="12" value="Távoli Dombok" required>
+                <label for="12.2">Távoli Dombok</label><br>
+                <input type="radio" id="12.3" name="12" value="Messzi Földek" required>
+                <label for="12.3">Messzi földek</label><br>
+            </fieldset>
+            <h3>Eszközök</h3>
+			<fieldset>
+                <legend id="13.0">13. Melyik mob használ íjat?</legend>
+                <input type="radio" id="13.1" name="13" value="Csontváz" required>
+                <label for="13.1">Csontváz</label><br>
+                <input type="radio" id="13.2" name="13" value="Zombi" required>
+                <label for="13.2">Zombi</label><br>
+                <input type="radio" id="13.3" name="13" value="Enderman" required>
+                <label for="13.3">Enderman</label><br>
+            </fieldset>
+			<fieldset>
+                <legend id="14.0">14. Mi a vasbalta két összetevője?</legend>
+                <input type="radio" id="14.1" name="14" value="Két bot, két vasrúd" required>
+                <label for="14.1">Két bot, két vasrúd</label><br>
+                <input type="radio" id="14.2" name="14" value="Két bot, három vasrúd" required>
+                <label for="14.2">Két bot, három vasrúd</label><br>
+                <input type="radio" id="14.3" name="14" value="Három bot, három vasrúd" required>
+                <label for="14.3">Három bot, három vasrúd</label><br>
+            </fieldset>
+			<fieldset>
+                <legend id="15.0">15. Hogy hívják a fosztogató nagy távolságban használható fegyverét?</legend>
+                <input type="radio" id="15.1" name="15" value="Íj" required>
+                <label for="15.1">Íj</label><br>
+                <input type="radio" id="15.2" name="15" value="Csúzli" required>
+                <label for="15.2">Csúzli</label><br>
+                <input type="radio" id="15.3" name="15" value="Számszeríj" required>
+                <label for="15.3">Számszeríj</label><br>
+            </fieldset>
+            <h3>Barkácsolás</h3>
+			<fieldset>
+                <legend id="16.0">16. Hány rács van egy barkácsasztalon?</legend>
+                <input type="radio" id="16.1" name="16" value="3" required>
+                <label for="16.1">3</label><br>
+                <input type="radio" id="16.2" name="16" value="6" required>
+                <label for="16.2">6</label><br>
+                <input type="radio" id="16.3" name="16" value="9" required>
+                <label for="16.3">9</label><br>
+            </fieldset>
+			<fieldset>
+                <legend id="17.0">17. Hány zúzottkő kell egy kemencéhez?</legend>
+                <input type="radio" id="17.1" name="17" value="8" required>
+                <label for="17.1">8</label><br>
+                <input type="radio" id="17.2" name="17" value="6" required>
+                <label for="17.2">6</label><br>
+                <input type="radio" id="17.3" name="17" value="4" required>
+                <label for="17.3">4</label><br>
+            </fieldset>
+			<fieldset>
+                <legend id="18.0">18. Mit készíthetsz alvilági csillaggal?</legend>
+                <input type="radio" id="18.1" name="18" value="Akadályblokkot" required>
+                <label for="18.1">Akadályblokkot</label><br>
+                <input type="radio" id="18.2" name="18" value="Jelzőfényt" required>
+                <label for="18.2">Jelzőfényt</label><br>
+                <input type="radio" id="18.3" name="18" value="Egy nagyon erős TNT-t" required>
+                <label for="18.3">Egy nagyon erős TNT-t</label><br>
+            </fieldset>
+            <h3>Blokkok</h3>
+			<fieldset>
+                <legend id="19.0">19. Hogy hívják azt a vörös anyagot, ami vezeti az áramot?</legend>
+                <input type="radio" id="19.1" name="19" value="Rozsda" required>
+                <label for="19.1">Rozsda</label><br>
+                <input type="radio" id="19.2" name="19" value="Vörösréz" required>
+                <label for="19.2">Vörösréz</label><br>
+                <input type="radio" id="19.3" name="19" value="Vöröskő" required>
+                <label for="19.3">Vöröskő</label><br>
+            </fieldset>
+			<fieldset>
+                <legend id="20.0">20. Milyen csákánnyal célszerű obszidiánt törni?</legend>
+                <input type="radio" id="20.1" name="20" value="Gyémánt vagy netherite" required>
+                <label for="20.1">Gyémánt vagy netherite</label><br>
+                <input type="radio" id="20.2" name="20" value="Csak gyémánt" required>
+                <label for="20.2">Csak gyémánt</label><br>
+                <input type="radio" id="20.3" name="20" value="Arany" required>
+                <label for="20.3">Arany</label><br>
+            </fieldset>
+			<fieldset>
+                <legend id="21.0">21. A kinézetén kívül miben különbözik a homok és a homokkő?</legend>
+                <input type="radio" id="21.1" name="21" value="A homokra hat a gravitáció" required>
+                <label for="21.1">A homokra hat a gravitáció</label><br>
+                <input type="radio" id="21.2" name="21" value="A homokkő nehezebb" required>
+                <label for="21.2">A homokkő nehezebb</label><br>
+                <input type="radio" id="21.3" name="21" value="A homoknak kisebb a sűrűsége" required>
+                <label for="21.3">A homoknak kisebb a sűrűsége</label><br>
+            </fieldset>
+            <h3>Vegyes</h3>
+			<fieldset>
+                <legend id="22.0">22. Hol él a végzetsárkány?</legend>
+                <input type="radio" id="22.1" name="22" value="A föld mélyén" required>
+                <label for="22.1">A föld mélyén</label><br>
+                <input type="radio" id="22.2" name="22" value="A végben" required>
+                <label for="22.2">A végben</label><br>
+                <input type="radio" id="22.3" name="22" value="A magasban" required>
+                <label for="22.3">A magasban</label><br>
+            </fieldset>
+			<fieldset>
+                <legend id="23.0">23. Hány vén őrszem van egy óceáni templomban?</legend>
+                <input type="radio" id="23.1" name="23" value="3" required>
+                <label for="23.1">3</label><br>
+                <input type="radio" id="23.2" name="23" value="4" required>
+                <label for="23.2">4</label><br>
+                <input type="radio" id="23.3" name="23" value="5" required>
+                <label for="23.3">5</label><br>
+            </fieldset>
+			<fieldset>
+                <legend id="24.0">24. Hány lélekhomok kell a sorvasztó megidézéséhez?</legend>
+                <input type="radio" id="24.1" name="24" value="5" required>
+                <label for="24.1">5</label><br>
+                <input type="radio" id="24.2" name="24" value="3" required>
+                <label for="24.2">3</label><br>
+                <input type="radio" id="24.3" name="24" value="4" required>
+                <label for="24.3">4</label><br>
+            </fieldset>
+            <h3>Barátságos mobok</h3>
+			<fieldset>
+                <legend id="25.0">25. Hogy hívják azt a vadon, dzsungelben élő mobot, aki azelőtt az egyetlen macskaféle volt?</legend>
+                <input type="radio" id="25.1" name="25" value="Szervál" required>
+                <label for="25.1">Szervál</label><br>
+                <input type="radio" id="25.2" name="25" value="Ocelot" required>
+                <label for="25.2">Ocelot</label><br>
+                <input type="radio" id="25.3" name="25" value="Vadmacska" required>
+                <label for="25.3">Vadmacska</label><br>
+            </fieldset>
+			<fieldset>
+                <legend id="26.0">26. Milyen színű a gyilkos nyúl bundája és szeme?</legend>
+                <input type="radio" id="26.1" name="26" value="Barna bunda, vörös szemek" required>
+                <label for="26.1">Barna bunda, vörös szemek</label><br>
+                <input type="radio" id="26.2" name="26" value="Fehér bunda, vörös szemek" required>
+                <label for="26.2">Fehér bunda, vörös szemek</label><br>
+                <input type="radio" id="26.3" name="26" value="Fehér bunda, barna szemek" required>
+                <label for="26.3">Fehér bunda, barna szemek</label><br>
+            </fieldset>
+			<fieldset>
+                <legend id="27.0">27. Hogy hívják a gombaszigeten élő, vörös színű teheneket?</legend>
+                <input type="radio" id="27.1" name="27" value="Rozsdatehén" required>
+                <label for="27.1">Rozsdatehén</label><br>
+                <input type="radio" id="27.2" name="27" value="Vöröskőtehén" required>
+                <label for="27.2">Vöröskőtehén</label><br>
+                <input type="radio" id="27.3" name="27" value="Gombatehén" required>
+                <label for="27.3">Gombatehén</label><br>
+            </fieldset>
+            <h3>Mojang</h3>
+			<fieldset>
+                <legend id="28.0">28. Melyik országban alapították a Mojangot?</legend>
+                <input type="radio" id="28.1" name="28" value="Svédország" required>
+                <label for="28.1">Svédország</label><br>
+                <input type="radio" id="28.2" name="28" value="Litvánia" required>
+                <label for="28.2">Litvánia</label><br>
+                <input type="radio" id="28.3" name="28" value="Kína" required>
+                <label for="28.3">Kína</label><br>
+            </fieldset>
+			<fieldset>
+                <legend id="29.0">29. Melyik nagy cég most a Mojang tulajdonosa?</legend>
+                <input type="radio" id="29.1" name="29" value="Epic Games" required>
+                <label for="29.1">Epic Games</label><br>
+                <input type="radio" id="29.2" name="29" value="Microsoft" required>
+                <label for="29.2">Microsoft</label><br>
+                <input type="radio" id="29.3" name="29" value="Oracle" required>
+                <label for="29.3">Oracle</label><br>
+            </fieldset>
+			<fieldset>
+                <legend id="30.0">30. Melyik évben alapították a Mojangot?</legend>
+                <input type="radio" id="30.1" name="30" value="2009. október" required>
+                <label for="30.1">2009. október</label><br>
+                <input type="radio" id="30.2" name="30" value="2009. május" required>
+                <label for="30.2">2009. május</label><br>
+                <input type="radio" id="30.3" name="30" value="2010. június" required>
+                <label for="30.3">2010. június</label><br>
+            </fieldset>
+			<button class="pointer" type="button" onclick="javascript:check();">Ellenőrzés</button>
+			<input class="pointer" type="reset" onclick="javascript:res();">
+            <button class="pointer" type="button" onclick="javascript:window.location.href=window.location.pathname+'#top';">Az oldal tetejére</button>
+        </form>
+		<h3 id="result"><br><br></h3>
+    </body>
+</html>
