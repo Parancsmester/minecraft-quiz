@@ -87,7 +87,6 @@
 			    correct.forEach(checkone);
 				levels.forEach(setlevel);
 				document.getElementById("result").innerHTML = `Eredmény: ${points} pont<br>${level}`;
-				points = 0;
 				window.location.href = window.location.pathname + "#result";
 			}
 			function res() {
@@ -95,6 +94,7 @@
 				    const title = document.getElementById(`${i}.0`);
 				    title.style.color = "black";
 					title.style.fontWeight = "normal";
+					points = 0;
 				}
 				document.getElementById("result").innerHTML = "<br><br>"
 			}
